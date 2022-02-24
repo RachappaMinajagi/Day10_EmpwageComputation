@@ -10,23 +10,29 @@ public class EmpWage {
 		int Day_HRs = 8;
 		int Part_HRs = 8;
 		int NumDays = 20;
-		double daywage = 0;
+		int MaxHRsMonth = 100;
+
+		int totalEmpHrs = 0;// Calculate the wages till a condition of the total working hrs days to reach
+		int empHrs = 0;
+		int totalWorkingDays = 0;
 		double monthwage = 0;
 
-		for (int i = 0; i < NumDays; i++) {
+		while (totalEmpHrs != MaxHRsMonth && totalWorkingDays != NumDays) {
+			totalWorkingDays++;
 			switch (num) {
 			case 1:
-				daywage = Wage_HR * Day_HRs * i;
+				empHrs = Day_HRs;
 				break;
 			case 2:
-				daywage = Wage_HR * (Day_HRs + Part_HRs) * i;
+				empHrs = Part_HRs;
 				break;
 			case 0:
+				empHrs = 0;
 				break;
-
 			}
-			monthwage = monthwage + daywage;
+			totalEmpHrs = totalWorkingDays + empHrs;
 		}
+		monthwage = totalEmpHrs * Wage_HR;
 		System.out.println("Month Wage : " + monthwage);
 
 	}
