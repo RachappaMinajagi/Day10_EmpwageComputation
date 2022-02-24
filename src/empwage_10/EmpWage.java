@@ -1,9 +1,9 @@
 package empwage_10;
 import java.util.Random; // import Random class
-
 /*
  * USing SwitchCase Wages for month 
- */
+*/
+
 public class EmpWage {
 	public static void EmpWageStatus(int num) {
 		int Wage_HR = 20;
