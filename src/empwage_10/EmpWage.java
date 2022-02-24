@@ -7,7 +7,7 @@ public class EmpWage {
 		System.out.println("Welcome to Employee Wage Computation Program");
 		int Wage_HR = 20;
 		int Day_HRs = 8;
-		int Part_HRs = 8;
+		int Part_HRs = 4;
 
 		Random random = new Random();
 		int r = random.nextInt(3);
@@ -18,7 +18,7 @@ public class EmpWage {
 			System.out.println("DayWage = " + Wage_HR * Day_HRs);
 		} else if (r == 2) {
 			System.out.println("Employee Present");
-			System.out.println("DayWage with Part Time = " + Wage_HR * (Day_HRs + Part_HRs));
+			System.out.println("DayWage with Part Time = " + Wage_HR *Part_HRs); // part time Employee
 		}
 
 		else
