@@ -1,5 +1,8 @@
 package empwage_10;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 interface IEmployeeWageComputation {
 	public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs);
 
@@ -94,11 +97,20 @@ class EmpWage implements IEmployeeWageComputation {
 		return totalWage;
 	}
 
+// create a method and calling the main function
 	public static void main(String args[]) {
 		EmpWage employeeWageComputation = new EmpWage(3);
 		employeeWageComputation.addCompany("TCS", 3, 30, 50);
 		employeeWageComputation.addCompany("D-mart", 8, 20, 120);
 		employeeWageComputation.addCompany("Wipro", 8, 22, 50);
 		employeeWageComputation.calculateTotalWage();
+		String query = "TCS";
+		int totalWage = employeeWageComputation.getTotalEmpWage(query);
+		System.out.println("Total Employee Wage for " + query + " company is " + totalWage);
+	}
+
+	private int getTotalEmpWage(String query) {
+
+		return 0;
 	}
 }
