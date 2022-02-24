@@ -61,9 +61,16 @@ class EmpWage {
 		System.out.println("Total Hrs of the Employee : " + totalHrCount);
 
 	}
-/*
- * Employee Wages for Multiple Companies
- */
+
+	/*
+	 * Employee Wages for Multiple Companies
+	 * 
+	 */
+	private String printToData() {
+
+		return "\nTotal Wage of the Month : " + totalMonthWage + "\nTotal Hrs of the Employee : " + totalHrCount;
+	}
+
 	public static void main(String[] args) {
 
 		EmpWage ibm = new EmpWage(); // create the Employee for the objects and set the values for Employee
@@ -80,5 +87,14 @@ class EmpWage {
 		System.out.println("Employee Wage for 'HCL': ");
 		hcl.setVariables(320, 20, 150);
 		hcl.setTotalMonthWage();
+
+		// save the Total Wage for Each Company
+
+		System.out.println("\nList Data");
+		System.out.println(ibm.printToData());
+		System.out.println(tcs.printToData());
+		System.out.println(hcl.printToData());
+
 	}
+
 }
